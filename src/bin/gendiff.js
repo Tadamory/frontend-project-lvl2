@@ -7,8 +7,8 @@ program
   .option('-f, --format <type>', 'Output format')
   .arguments('<firstConfig> <secondConfig>')
   .action((firstConfig, secondConfig) => {
-    firstConfigValue = firstConfig;
-    secondConfigValue = secondConfig;
+    console.log('firstConfig:', firstConfig);
+    console.log('secondConfig:', secondConfig);
   });
 
 program.parse(process.argv);
