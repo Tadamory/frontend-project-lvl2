@@ -8,7 +8,7 @@ start:
 	gendiff __test__/before.json __test__/after.json
 
 jest:
-	npx jest
+	npx jest --coverage
 
 build:
 	npm run build
