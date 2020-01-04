@@ -1,8 +1,14 @@
 lint:
 	npx eslint .
 
-gendiff:
-	npx babel-node src/bin/gendiff.js
+test:
+	npx babel-node src/bin/gendiff.js __test__/before.json __test__/after.json
+
+start:
+	gendiff __test__/before.json __test__/after.json
+
+jest:
+	npx jest
 
 build:
 	npm run build
