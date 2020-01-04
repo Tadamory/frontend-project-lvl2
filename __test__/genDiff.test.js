@@ -7,8 +7,8 @@ const targetStr = 'host: hexlet.io\n'
   + '- follow: false\n'
   + '- verbose: true';
 
-const firstPathToFile = './__test__/before.json';
-const secondPathToFile = './__test__/after.json';
+const firstPathToFile = './__test__/__fixtures__/before.json';
+const secondPathToFile = './__test__/__fixtures__/after.json';
 
 test('compareFlatFiles', () => {
   expect(compareFlatFiles(firstPathToFile, secondPathToFile)).toEqual(targetStr);
