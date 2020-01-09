@@ -2,7 +2,7 @@
   "name": "frontend-project-lvl2-tadamory",
   "version": "1.1.3",
   "description": "Difference calculator",
-  "main": "dist/bin/gendiff.js",
+  "main": "dist/bin/genDiff.js",
   "files": [
     "dist"
   ],
