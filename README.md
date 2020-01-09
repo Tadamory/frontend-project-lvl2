@@ -4,3 +4,5 @@
 [![Build Status](https://travis-ci.org/Tadamory/frontend-project-lvl2.svg?branch=master)](https://travis-ci.org/Tadamory/frontend-project-lvl2)
 
 ## Сравнение плоских файлов (JSON)
+
+[![Compare flat files](https://asciinema.org/a/FKgBSWmoSnLQVHUCN2vblyS5I.png)](https://asciinema.org/a/FKgBSWmoSnLQVHUCN2vblyS5I)
