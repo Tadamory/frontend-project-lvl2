@@ -5,7 +5,7 @@ start:
 	gendiff __test__/__fixtures__/before.json __test__/__fixtures__/after.json
 
 test:
-	npx jest --coverage
+	npx jest --watchAll
 
 build:
 	npm run build
