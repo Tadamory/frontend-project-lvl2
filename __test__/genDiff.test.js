@@ -7,9 +7,20 @@ const targetStr = 'host: hexlet.io\n'
   + '- follow: false\n'
   + '- verbose: true';
 
-const firstPathToFile = './__test__/__fixtures__/before.json';
-const secondPathToFile = './__test__/__fixtures__/after.json';
+test('compareFlatFiles: path', () => {
+  const firstPathToFile = './__test__/__fixtures__/before.json';
+  const secondPathToFile = './__test__/__fixtures__/after.json';
+  expect(compareFlatFiles(firstPathToFile, secondPathToFile)).toEqual(targetStr);
+});
 
-test('compareFlatFiles', () => {
+test('compareFlatFiles: absolute path', () => {
+  const firstPathToFile = '/home/tadamory/projects/frontend-project-lvl2/__test__/__fixtures__/before.json';
+  const secondPathToFile = '/home/tadamory/projects/frontend-project-lvl2/__test__/__fixtures__/after.json';
+  expect(compareFlatFiles(firstPathToFile, secondPathToFile)).toEqual(targetStr);
+});
+
+test('compareFlatFiles: relative path', () => {
+  const firstPathToFile = '__test__/__fixtures__/before.json';
+  const secondPathToFile = '__test__/__fixtures__/after.json';
   expect(compareFlatFiles(firstPathToFile, secondPathToFile)).toEqual(targetStr);
 });

@@ -5,10 +5,10 @@ const path = require('path');
 
 const compareFlatFiles = (firstPathToFile, secondPathToFile) => {
   const resultParse = [];
-  const firstFile = fs.readFileSync(path.resolve(firstPathToFile));
+  const firstFile = fs.readFileSync(path.normalize(firstPathToFile));
   const firstFileAfterParse = JSON.parse(firstFile);
 
-  const secondFile = fs.readFileSync(path.resolve(secondPathToFile));
+  const secondFile = fs.readFileSync(path.normalize(secondPathToFile));
   const secondFileAfterParse = JSON.parse(secondFile);
 
   Object.keys(firstFileAfterParse).map((key) => {
