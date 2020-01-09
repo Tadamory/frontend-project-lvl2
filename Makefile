@@ -2,7 +2,7 @@ lint:
 	npx eslint .
 
 start:
-	gendiff __test__/__fixtures__/before.json __test__/__fixtures__/after.json
+	genDiff __test__/__fixtures__/before.json __test__/__fixtures__/after.json
 
 test:
 	npx jest --watchAll
