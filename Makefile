@@ -1,13 +1,10 @@
 lint:
 	npx eslint .
 
-test:
-	npx babel-node src/bin/gendiff.js __test__/before.json __test__/after.json
-
 start:
 	gendiff __test__/__fixtures__/before.json __test__/__fixtures__/after.json
 
-jest:
+test:
 	npx jest --coverage
 
 build:
