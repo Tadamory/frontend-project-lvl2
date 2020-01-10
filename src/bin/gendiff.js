@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 import compareFlatFiles from '../compareFlatFiles';
-
-const program = require('commander');
+import commander from 'commander';
 
 const genDiff = (firstPathToFile, secondPathToFile) => {
   compareFlatFiles(firstPathToFile, secondPathToFile);
 };
 
-program
+commander
   .version('0.0.1')
   .description('Compares two configuration files and shows a difference.')
   .option('-f, --format [type]', 'Output format')
@@ -16,6 +15,6 @@ program
     genDiff(firstPathToFile, secondPathToFile);
   });
 
-program.parse(process.argv);
+commander.parse(process.argv);
 
 export default genDiff;

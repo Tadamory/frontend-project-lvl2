@@ -1,15 +1,18 @@
-import * as _ from 'lodash';
-
-const fs = require('fs');
-const path = require('path');
+import _ from 'lodash';
+import fs from 'fs';
+import parsers from './parsers';
+import path from 'path';
 
 const compareFlatFiles = (firstPathToFile, secondPathToFile) => {
   const resultParse = [];
+  
+  const parse = parsers(firstPathToFile);
+
   const firstFile = fs.readFileSync(path.normalize(firstPathToFile));
-  const firstFileAfterParse = JSON.parse(firstFile);
+  const firstFileAfterParse = parse(firstFile);
 
   const secondFile = fs.readFileSync(path.normalize(secondPathToFile));
-  const secondFileAfterParse = JSON.parse(secondFile);
+  const secondFileAfterParse = parse(secondFile);
 
   Object.keys(firstFileAfterParse).map((key) => {
     const firstValue = firstFileAfterParse[key];

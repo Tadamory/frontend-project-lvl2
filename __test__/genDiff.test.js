@@ -1,18 +1,20 @@
 import compareFlatFiles from '../src/compareFlatFiles';
 
-//  const path = require('path');
+const fs = require('fs');
 
-const targetStr = 'host: hexlet.io\n'
-  + '- timeout: 50\n'
-  + '+ timeout: 20\n'
-  + '- proxy: 123.234.53.22\n'
-  + '- follow: false\n'
-  + '- verbose: true';
+const resultJson = fs.readFileSync('__test__/__fixtures__/json/result.txt', 'utf8');
+const resultYaml = fs.readFileSync('__test__/__fixtures__/yaml/result.txt', 'utf8');
 
 //  далее нужно будет добавить тест на path.dirname для работы с абсолютными путями
 
-test('compareFlatFiles: relative path', () => {
-  const firstPathToFile = '__test__/__fixtures__/before.json';
-  const secondPathToFile = '__test__/__fixtures__/after.json';
-  expect(compareFlatFiles(firstPathToFile, secondPathToFile)).toEqual(targetStr);
+test('compare flat files: json', () => {
+  const firstPathToFile = '__test__/__fixtures__/json/before.json';
+  const secondPathToFile = '__test__/__fixtures__/json/after.json';
+  expect(compareFlatFiles(firstPathToFile, secondPathToFile)).toEqual(resultJson);
+});
+
+test('compare flat files: yaml', () => {
+  const firstPathToFile = '__test__/__fixtures__/yaml/before.yml';
+  const secondPathToFile = '__test__/__fixtures__/yaml/after.yml';
+  expect(compareFlatFiles(firstPathToFile, secondPathToFile)).toEqual(resultYaml);
 });

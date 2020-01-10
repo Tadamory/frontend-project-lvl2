@@ -1,8 +1,11 @@
 lint:
 	npx eslint .
 
-start:
-	genDiff __test__/__fixtures__/before.json __test__/__fixtures__/after.json
+jsonStart:
+	gendiff __test__/__fixtures__/json/before.json __test__/__fixtures__/json/after.json
+
+yamlStart:
+	gendiff __test__/__fixtures__/yaml/before.yml __test__/__fixtures__/yaml/after.yml
 
 test:
 	npx jest
