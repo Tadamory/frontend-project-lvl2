@@ -1,11 +1,12 @@
 import _ from 'lodash';
 import fs from 'fs';
 import parsers from './parsers';
-import path from 'path';
+
+const path = require('path');
 
 const compareFlatFiles = (firstPathToFile, secondPathToFile) => {
   const resultParse = [];
-  
+
   const parse = parsers(firstPathToFile);
 
   const firstFile = fs.readFileSync(path.normalize(firstPathToFile));
