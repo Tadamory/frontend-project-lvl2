@@ -9,13 +9,11 @@ const compareFlatFiles = (firstPathToFile, secondPathToFile) => {
 
   const parse = parsers(firstPathToFile);
 
-  const firstFile = fs.readFileSync(path.normalize(firstPathToFile));
-
-  console.log(firstFile);
+  const firstFile = fs.readFileSync(path.normalize(firstPathToFile), 'utf8');
 
   const firstFileAfterParse = parse(firstFile);
 
-  const secondFile = fs.readFileSync(path.normalize(secondPathToFile));
+  const secondFile = fs.readFileSync(path.normalize(secondPathToFile), 'utf8');
   const secondFileAfterParse = parse(secondFile);
 
   Object.keys(firstFileAfterParse).map((key) => {
