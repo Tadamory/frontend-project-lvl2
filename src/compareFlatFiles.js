@@ -10,6 +10,9 @@ const compareFlatFiles = (firstPathToFile, secondPathToFile) => {
   const parse = parsers(firstPathToFile);
 
   const firstFile = fs.readFileSync(path.normalize(firstPathToFile));
+
+  console.log(firstFile);
+
   const firstFileAfterParse = parse(firstFile);
 
   const secondFile = fs.readFileSync(path.normalize(secondPathToFile));

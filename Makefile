@@ -7,6 +7,9 @@ jsonStart:
 yamlStart:
 	gendiff __test__/__fixtures__/yaml/before.yml __test__/__fixtures__/yaml/after.yml
 
+iniStart:
+	gendiff __test__/__fixtures__/ini/before.ini __test__/__fixtures__/ini/after.ini
+
 test:
 	npx jest
 

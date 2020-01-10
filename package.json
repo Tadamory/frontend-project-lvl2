@@ -1,6 +1,6 @@
 {
   "name": "frontend-project-lvl2-tadamory",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Difference calculator",
   "main": "dist/bin/gendiff.js",
   "files": [
@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "commander": "^4.0.1",
+    "ini": "^1.3.5",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
     "source-map-support": "^0.5.16"
