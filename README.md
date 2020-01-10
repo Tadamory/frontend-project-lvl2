@@ -5,8 +5,12 @@
 
 ## Сравнение плоских файлов (json)
 
-[![Compare flat files](https://asciinema.org/a/FKgBSWmoSnLQVHUCN2vblyS5I.png)](https://asciinema.org/a/FKgBSWmoSnLQVHUCN2vblyS5I)
+[![Compare flat files](https://asciinema.org/a/292801.png)](https://asciinema.org/a/292801)
 
 ## Сравнение плоских файлов (yaml)
 
 [![Compare flat files](https://asciinema.org/a/292778.png)](https://asciinema.org/a/292778)
+
+## Сравнение плоских файлов (ini)
+
+[![Compare flat files](https://asciinema.org/a/292797.png)](https://asciinema.org/a/292797)
