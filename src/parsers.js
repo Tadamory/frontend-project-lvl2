@@ -1,5 +1,5 @@
-const path = ('path');
-const yaml = ('js-yaml');
+const path = require('path');
+const yaml = require('js-yaml');
 
 //  тут нужно будет сделать через диспетчеризацию
 
