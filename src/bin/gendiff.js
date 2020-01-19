@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-import compareFlatFiles from '../compareFlatFiles';
+import compareFiles from '../index';
 
 const program = require('commander');
 
 const genDiff = (firstPathToFile, secondPathToFile) => {
-  compareFlatFiles(firstPathToFile, secondPathToFile);
+  compareFiles(firstPathToFile, secondPathToFile);
 };
 
 program

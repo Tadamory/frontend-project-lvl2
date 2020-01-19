@@ -1,17 +1,19 @@
+import JsonFile from './jsonFile';
+import YamlFile from './yamlFile';
+import IniFile from './iniFile';
+
 const path = require('path');
-const yaml = require('js-yaml');
-const ini = require('ini');
 
 //  тут нужно будет сделать через диспетчеризацию
 
 export default (pathToFile) => {
   switch (path.extname(pathToFile)) {
     case '.json':
-      return JSON.parse;
+      return new JsonFile();
     case '.yml':
-      return yaml.safeLoad;
+      return new YamlFile();
     case '.ini':
-      return ini.parse;
+      return new IniFile();
     default:
       return null;
   }
